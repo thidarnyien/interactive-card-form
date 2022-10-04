@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Space Grotesk', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    background: url(../images/bg-main-desktop.png) no-repeat left;
+    background-size: contain;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+main{
+    width: 75%;
+    justify-content: space-between;
+    align-items: center;
+}
+.credit{
+    position: relative;
+    width: 50%;
+}
+.credit-front,.credit-back{
+    width: 320px;
+    height: 200px;
+    text-align: center;
+}
+.credit-front{
+    background: url(../images/bg-card-front.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.circle1{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+}
+.circle2{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    border: 2px solid white;
+}
+#cardNumber{
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+#cardhloderName,.expDate{
+    margin-top: 18px;
+    font-size: .9rem;
+}
+.credit-back{
+    background: url(../images/bg-card-back.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+    right: -10%;
+}
+#cvcNumber{
+    position: absolute;
+    top: 43.5%;
+    right: 8%;
+    font-size: .9rem;
+}
+.confirm{
+    text-decoration: none;
+    width: 100%;
+}
+form{
+    width: 400px;
+}
+.completed,.expErr,.cvcErr,.cardNumberErr{
+    display: none;
+}
+.btn-violet{
+    background-color: hsl(278, 68%, 11%);
+    border: 0 none;
+}
+@media (max-width: 768px) {
+    body{
+        background: url(../images/bg-main-mobile.png) no-repeat top;
+        background-size: contain;
+    }
+    main{
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .credit{
+        width: 100%;
+        margin-bottom: 120px;
+    }
+    .credit-front{
+        position: absolute;
+        z-index: 1;
+        top: 55%;
+        left: -10%;
+    }
+    .credit-back{
+        right: 0%;
+    }
+    form{
+        max-width: 90%;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
